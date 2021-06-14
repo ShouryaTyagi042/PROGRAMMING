@@ -17,8 +17,10 @@ host_name = input("Enter your host name:  ")
 
 # checking user credentials
 try:
+    # Establishing connection with MySql Database .
     myconnection = mysql.connector.connect(host=host_name,user=user_name,passwd=mysql_passwd)
     mycursorconnection = myconnection.cursor()
+    # Creating database
     try :
         mycursorconnection.execute("CREATE DATABASE School_Management_System")
         print()
@@ -29,6 +31,8 @@ try:
     mydb = mysql.connector.connect(host=host_name,user=user_name,passwd=mysql_passwd,database="School_Management_System")
     mycursor = mydb.cursor()
 
+    # Creating User Tables
+
     def create_student_table():
         mycursor.execute(" CREATE TABLE student (UID int auto_increment , Roll_No int(15) ,Name varchar(30) , Class varchar(10) , Section varchar(10) , Phone_No varchar(255) , Email varchar(166) , Primary key (UID));")
         mydb.commit()
@@ -38,6 +42,8 @@ try:
     def create_attendance_table() :
         mycursor.execute("CREATE TABLE Attendance (AID int auto_increment , Student_UID int(25) ,Date_ date ,  Subject varchar(166) ,Status  varchar(35) ,Time_of_Join time, Time_of_Leave time , Primary key (AID)); ")
         mydb.commit()
+
+    # Main functions starts
 
     def main() :
 
@@ -84,6 +90,7 @@ try:
 
                 else :
                     print("INVALID choice")
+    # Menu functions
     def student_menu() :
         while True :
             heading = "SCHOOL MANAGEMENT SYSTEM "
@@ -307,7 +314,7 @@ try:
                 else :
                     print("Incorrect NAME")
     def library_menu() :
-        while True() :
+        while True :
             heading = "SCHOOL MANAGEMENT SYSTEM "
             sub_1 = "<library>"
             print("="*len(heading.center(156,"-")))
@@ -330,9 +337,9 @@ try:
 
             if choice == "1" :
                 library_menu_add()
-            elif choice == "2 " :
+            elif choice == "2" :
                 library_menu_update()
-            elif choice == " 3" :
+            elif choice == "3" :
                 library_menu_show()
             elif choice == "4" :
                 library_menu_delete()
@@ -404,21 +411,21 @@ try:
             print("Invalid Option")
             print()
     def library_menu_show() :
-        while True :
-            heading = "SCHOOL MANAGEMENT SYSTEM "
-            sub_1 = "LIBRARY"
-            sub_2 = "<SHOW>"
-            print("="*len(heading.center(156,"-")))
-            print(heading.center(156,"-"))
-            print(sub_1.center(156,"-"))
-            print(sub_2.center(156,"-"))
-            print("="*len(heading.center(156,"-")))
-            print()
-            mycursor.execute("SELECT * FROM library ")
-            rec = mycursor.fetchall()
-            print("-"*156)
-            print(tabulate(rec , headers= ["BID","Book_Code","Book_Name","Author_Name","Subject","Issued","UID","Return_Date","Return_Status"]))
-            print("-"*156)
+
+        heading = "SCHOOL MANAGEMENT SYSTEM "
+        sub_1 = "LIBRARY"
+        sub_2 = "<SHOW>"
+        print("="*len(heading.center(156,"-")))
+        print(heading.center(156,"-"))
+        print(sub_1.center(156,"-"))
+        print(sub_2.center(156,"-"))
+        print("="*len(heading.center(156,"-")))
+        print()
+        mycursor.execute("SELECT * FROM library ")
+        rec = mycursor.fetchall()
+        print("-"*156)
+        print(tabulate(rec , headers= ["BID","Book_Code","Book_Name","Author_Name","Subject","Issued","UID","Return_Date","Return_Status"]))
+        print("-"*156)
     def library_menu_search() :
         while  True :
             heading = "SCHOOL MANAGEMENT SYSTEM "
@@ -572,6 +579,7 @@ try:
             # print("9. SEARCH WITH Return Status")
             print("6. Return ")
             print()
+            choice = int(input("Enter your choice : "))
 
             if choice >= 1 and choice <= 5 :
                 bid = int(input("Enter BID of book :"))
@@ -663,12 +671,12 @@ try:
                                 mydb.commit()
                                 exists = True
                                 print("Book Updated ")
-                elif choice == 6 :
-                    break
-                else :
-                    print("Invalid Choice")
-                if not exists and choice >= 1 and choice <= 5 :
-                    print("Invalid Details")
+            elif choice == 6 :
+                break
+            else :
+                print("Invalid Choice")
+            if not exists and choice >= 1 and choice <= 5 :
+                print("Invalid Details")
     def library_menu_delete() :
         heading = "SCHOOL MANAGEMENT SYSTEM "
 
@@ -727,7 +735,7 @@ try:
                 attendance_menu_add()
             elif choice == "2 " :
                 attendance_menu_update()
-            elif choice == " 3" :
+            elif choice == "3" :
                 attendance_menu_show()
             elif choice == "4" :
                 attendance_menu_delete()
@@ -772,7 +780,7 @@ try:
                         print("Error",e)
                         print("Enter in HH:MM:SS format ! ")
                         print()
-                    sql_1 = "SELECT FROM attendance WHERE Student_UID = (%s) and Date_ = (%s) and Status = (%s) and Time_of_Join = (%s) and Time_of_Leave = (%s)  "
+                    sql_1 = "SELECT * FROM attendance WHERE Student_UID = (%s) and Date_ = (%s) and Status = (%s) and Time_of_Join = (%s) and Time_of_Leave = (%s)  "
                     val_1 = (st_uid,date,status,time_of_Join,time_of_Leave)
                     mycursor.execute(sql_1,val_1)
                     r = mycursor.fetchall()
@@ -783,7 +791,7 @@ try:
                     val = (st_uid,date,subject,"A",None,None)
                     mycursor.execute(sql,val)
                     mydb.commit()
-                    sql_1 = "SELECT FROM attendance WHERE Student_UID = (%s) and Date_ = (%s) and Status = (%s)"
+                    sql_1 = "SELECT * FROM attendance WHERE Student_UID = (%s) and Date_ = (%s) and Status = (%s)"
                     val_1 = (st_uid,date,"A")
                     mycursor.execute(sql_1,val_1)
                     r = mycursor.fetchall()
@@ -902,21 +910,21 @@ try:
                 if not exists and choice >= 1 and choice <= 4 :
                     print("Invalid Details")
     def attendance_menu_show() :
-        while True :
-            heading = "SCHOOL MANAGEMENT SYSTEM "
-            sub_1 = "ATTENDANCE"
-            sub_2 = "<SHOW>"
-            print("="*len(heading.center(156,"-")))
-            print(heading.center(156,"-"))
-            print(sub_1.center(156,"-"))
-            print(sub_2.center(156,"-"))
-            print("="*len(heading.center(156,"-")))
-            print()
-            mycursor.execute("SELECT * FROM attendance ")
-            rec = mycursor.fetchall()
-            print("-"*156)
-            print(tabulate(rec,headers = ["AID","Student_UID","Date","Subject","Status","Time_of_Join","Time_of_Leave"]))
-            print("-"*156)
+
+        heading = "SCHOOL MANAGEMENT SYSTEM "
+        sub_1 = "ATTENDANCE"
+        sub_2 = "<SHOW>"
+        print("="*len(heading.center(156,"-")))
+        print(heading.center(156,"-"))
+        print(sub_1.center(156,"-"))
+        print(sub_2.center(156,"-"))
+        print("="*len(heading.center(156,"-")))
+        print()
+        mycursor.execute("SELECT * FROM attendance ")
+        rec = mycursor.fetchall()
+        print("-"*156)
+        print(tabulate(rec,headers = ["AID","Student_UID","Date","Subject","Status","Time_of_Join","Time_of_Leave"]))
+        print("-"*156)
     def attendance_menu_delete() :
         heading = "SCHOOL MANAGEMENT SYSTEM "
 
