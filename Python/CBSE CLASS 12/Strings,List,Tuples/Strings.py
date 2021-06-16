@@ -22,3 +22,4 @@ print(s.lstrip("gi"))
 n = "2"
 m = "6"
 print(type(eval(n+m)))
+
