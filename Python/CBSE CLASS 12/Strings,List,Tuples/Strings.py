@@ -1,6 +1,6 @@
 
 # print(type(s))
-# print(s[-4:])
+print(s[-4:])
 
 # l1 = [1,2,3]
 # l1[3] = 4
