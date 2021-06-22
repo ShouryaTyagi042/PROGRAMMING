@@ -1,14 +1,11 @@
-l = int(input())
-for i in range(l) :
-    x = int(input())
-    ans = 0
-    for j in range(1,x+1) :
-        str1 = str(j)
-        flag = True
-        for k in range(len(str1)) :
-            if str1[0] != str1[k] :
-                flag = False
-                break
-        if flag == True :
-            ans += 1
-    print(ans)
+t = int(input())
+for i in range(t) :
+    n = int(input())
+    i = 1
+    res = 0
+    while i <= n :
+        for j in range(1,10) :
+            if i * j <= n :
+                res += 1
+        i = i*10 + 1
+    print(res)
