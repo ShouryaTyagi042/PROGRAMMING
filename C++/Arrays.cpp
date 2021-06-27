@@ -11,8 +11,9 @@ int main() {
     cin>> n ;
     int arr[n] ;
     for ( int i = 0 ; i <n ; i++) {
-        cin >> i ;
-        arr[i] = i ;
+        int x ;
+        cin >> x ;
+        arr[i] = x ;
     }
     printArray(arr,n);
 
