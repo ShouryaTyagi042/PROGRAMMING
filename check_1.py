@@ -1,2 +1,2 @@
-check = int(input())
-print(check)
+s = "shourya tyagi don"
+print(s[:])
