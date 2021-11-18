@@ -37,7 +37,24 @@ decorated()
 @decor
 def print_word() :
     print("sHOURYA IS GREATEST OF ALL TIME ")
+
 print_word()
+
+# Recursions
+# fundamentally it is called self-reference functions calling themselves
+def factorials(x) :
+    if x == 1 :       # base case which never calls the function again
+        return 1
+    else :
+        return x*factorials(x-1)
+print(factorials(5))
+
+
+
+
+
+
+
 
 
 
