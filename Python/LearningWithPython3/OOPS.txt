@@ -1,0 +1,18 @@
+# two paradigms of programming -
+# imperative (using statements, loops, and functions as subroutines), and
+# functional (using pure functions, higher-order functions, and recursion).
+# class can be described as an object's blueprint, description, or definition.
+# You can use the same class as a blueprint for creating multiple different objects.
+
+Every class should have a method with the special name __init__. This
+initializer method is automatically called whenever a new instance of Point
+is created. It gives the programmer the opportunity to set up the attributes
+required within the new instance by giving them their initial state/values.
+The self parameter (we could choose any other name, but self is the
+convention) is automatically set to reference the newly created object that
+needs to be initialized.
+
+A function like Turtle or Point that creates a new object instance is called a constructor, and every class automatically provides a constructor function which is named the same as the class.
+The combined process of “make me a new object” and “get its settings initialized to the factory default settings” is called instantiation.
+
+Objects are most useful when we also need to keep some state that is updated from time to time. Consider a turtle object. Its state consists of things like its position, its heading, its color, and its shape. A method like left(90) updates the turtle’s heading, forward changes its position, and so on.
