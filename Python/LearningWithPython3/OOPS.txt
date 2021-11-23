@@ -12,6 +12,7 @@ The self parameter (we could choose any other name, but self is the
 convention) is automatically set to reference the newly created object that
 needs to be initialized.
 
+
 A function like Turtle or Point that creates a new object instance is called a constructor, and every class automatically provides a constructor function which is named the same as the class.
 The combined process of “make me a new object” and “get its settings initialized to the factory default settings” is called instantiation.
 

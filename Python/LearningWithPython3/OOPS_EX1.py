@@ -34,11 +34,10 @@ class Point :
 # print(p1_x)
 # print(p1.slope_from_origin())
 # # print(Point.slope_from_origin(p1)) Two ways to call the method
-
-
-
 # print(p1.equation_of_line(p2))
 
+class SMS_store :
+    def __init__(self,)
 
 
 
