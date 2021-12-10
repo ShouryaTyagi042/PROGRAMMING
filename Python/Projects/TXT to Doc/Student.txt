@@ -1,0 +1,10 @@
+Shourya||Tyagi||15906||DTU||ECE
+Rachit||Goel||8900||DTU||MNC
+Hriday||Bhardwaj||4000||DTU||COE
+Manan||Jamuar||23990||DTU||EE
+Samarth||Kukreja||4560||NIT KKR||CSE
+Akshit||Dudeja||2000||IIT BBN||CSE
+Himanshu||Mahlawat||36000||TIET||CSE
+Prithvi||Chaudhary||400000||SRM||CSE
+Devansh||Sharma||30000||BITS GOA||ECE
+Satyam||Gupta||1000||IIT KGP||MNSC
