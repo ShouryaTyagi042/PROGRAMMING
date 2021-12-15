@@ -23,11 +23,11 @@ def undo_absolute() :
 def test_suite():
     """ Run the suite of tests for code in this module (this file).
     """
-    test(absolute_value(17) == 17)
-    test(absolute_value(-17) == 17)
-    test(absolute_value(0) == 0)
-    test(absolute_value(3.14) == 3.14)
-    test(absolute_value(-3.14) == 3.14)
+    # test(absolute_value(17) == 17)
+    # test(absolute_value(-17) == 17)
+    # test(absolute_value(0) == 0)
+    # test(absolute_value(3.14) == 3.14)
+    # test(absolute_value(-3.14) == 3.14)
 
 test_suite()
 
