@@ -118,4 +118,4 @@ sub_btn.grid(row=2, column=1)
 
 # performing an infinite loop
 # for the window to display
-root.mainloop()
+root.mainloop() 
