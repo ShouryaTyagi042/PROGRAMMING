@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 #include <cstdio>
-#include <conio.h>
+// #include <conio.h>
 using namespace std ;
 void sum_of_digits(int num)  {
     int sum = 0 ;
