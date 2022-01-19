@@ -14,7 +14,7 @@ int main() {
         int x ;
         cin >> x ;
         arr[i] = x ;
-    }
+    }<
     printArray(arr,n);
 
     return 0 ;
