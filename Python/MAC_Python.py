@@ -1,4 +1,5 @@
-number = 87
-print(number)
-for num in range(5):
-    print(num)
+n = int(input())
+for i in range(1, n + 1):
+    for j in range(1, i + 1):
+        print(j, end="")
+    print("")
