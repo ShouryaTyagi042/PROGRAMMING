@@ -1,9 +1,9 @@
-// #include <bits/stdc++.h>
 #include<stdio.h>
+// #include <
 int main()
 {
     int i,j,k,l, num;
-    for (i = 1; i <= 21; i++)
+    for (i = 1; i <= 15; i++)
     {
         for ( l = 1; l <= 10-i; l++)
         {
