@@ -15,6 +15,35 @@ typedef pair<int, int> pi;
 #define PB push_back
 #define POB pop_back
 #define MP make_pair
+int solve() {
+    int v1 , v2 , v3 ;
+    cin >> v1 >> v2 >> v3 ;
+    // cout << v1 << v2 << v3 ;
+    int f1 = 2*v2-v3 ;
+    int f2 = (v1 + v3)/2 ;
+    int f3 = 2*v2 - v1 ;
+    if (f1 >=  v1 && f1 != 0) {
+        if ( f1 % v1 == 0) {
+            cout << "yes" << endl ;
+            return 0 ;
+        }
+    }
+     if (f2 >= v2 && f2 != 0 && (v1+v3)%2 == 0) {
+        if ( f2 % v2 == 0) {
+            cout << "yes" << endl ;
+            return 0 ;
+        }
+    }
+     if (f3 >= v3) {
+        if ( f3 % v3 == 0 && f3 != 0 ) {
+            cout << "yes" << endl ;
+            return 0 ;
+        }
+    }
+    cout << "NO" << endl ;
+    return 0 ;
+
+}
 int main()
 {
     #ifndef ONLINE_JUDGE
@@ -25,7 +54,9 @@ int main()
     int T;
     cin >> T;
     while (T > 0 ) {
-        // solve();
+        solve() ;
+
+    
 
         T -- ;
 

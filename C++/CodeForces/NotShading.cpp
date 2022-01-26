@@ -61,7 +61,9 @@ void solve() {
 
 }
 
-
+void solve() {
+    
+}
     
     
 
