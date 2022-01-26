@@ -15,23 +15,18 @@ typedef pair<int, int> pi;
 #define PB push_back
 #define POB pop_back
 #define MP make_pair
-void solve() {
-    int n ;
-    cin >> n ;
-    cout << n*n << endl ;
-
-}
 int main()
 {
     #ifndef ONLINE_JUDGE
     freopen("input.txt","r",stdin);
     freopen("output.txt","w",stdout) ;
     #endif
-    // ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+    ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
     int T;
     cin >> T;
-    while (T > 0) {
-        solve();
+    while (T > 0 ) {
+        // solve();
+
         T -- ;
 
     }
