@@ -25,6 +25,7 @@ int main()
     ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
     int T;
     cin >> T;
+    int f = T ;
     // int diff[T] ;
     int p1sum = 0 ;
     int p2sum = 0 ;
@@ -33,6 +34,7 @@ int main()
     while (T > 0 ) {
         int p1 , p2 , d ;
         cin >> p1 >> p2 ;
+        // cout << p1 << " " << p2 << "\n" ;
         p1sum += p1 ;
         p2sum += p2 ;
         d = p1sum - p2sum ;
@@ -45,8 +47,27 @@ int main()
             p2arr[i]  = d ;
             p1arr[i] = 0 ;
         }
+        i++ ;
+        T-- ;
     }
-    int 
+    
+    int max1 = 0 ; 
+    int max2 = 0 ;
+
+    FOR (a,f) {
+        if ( max1 < p1arr[a] ) {
+            max1 = p1arr[a] ;
+        }
+        if ( max2 < p2arr[a] ) {
+            max2 = p2arr[a] ;
+        }
+    } 
+    if ( max1 > max2) {
+        cout << 1 << " " << max1 << "\n" ;
+    }
+    else{
+        cout << 2 << " " << max2 << "\n" ;
+    } 
 
 
     return 0;
