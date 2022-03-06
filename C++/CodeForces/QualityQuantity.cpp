@@ -7,7 +7,6 @@ using namespace std;
 // #define FORL(a, b, c) for (int(a) = (b); (a) <= (c); (a)++)
 // #define FORR(a, b, c) for (int(a) = (b); (a) >= (c); (a)--)
 #define INF 1000000000000000003
-#define 
 typedef long long int ll;
 typedef vector<int> vi;
 typedef pair<int, int> pi;
@@ -16,24 +15,6 @@ typedef pair<int, int> pi;
 #define PB push_back
 #define POB pop_back
 #define MP make_pair
-void solve() {
-    int n ;
-    string c ;
-    cin >> n >> c ;
-    if ( n >= 3) {
-        cout << "NO" << "\n" ;
-        return ;
-    }
-    // if ( n )
-    if ( n == 2) {
-        if ( c == "00" || c == "11") {
-            cout << "NO" << '\n' ;
-            return ;
-        }
-    }
-    cout << "YES" << "\n" ;
-    return ;
-}
 int main()
 {
     #ifndef ONLINE_JUDGE
@@ -44,8 +25,10 @@ int main()
     int T;
     cin >> T;
     while (T > 0 ) {
-        solve();
+        // solve();
+
         T -- ;
+
     }
     return 0;
 }
