@@ -24,6 +24,7 @@ int main(){
             }
         }
     }
+
     printf("second largest element is %d",max2);
         return 0;
     }

@@ -17,9 +17,4 @@ int main() {
 
 }
 
-/*
-wap sum of two matrices
-wap to find sum and product of all elements of 2d array
 
-
-*/
