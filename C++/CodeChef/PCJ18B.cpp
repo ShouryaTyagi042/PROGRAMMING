@@ -15,8 +15,15 @@ typedef pair<int, int> pi;
 #define PB push_back
 #define POB pop_back
 #define MP make_pair
-int solve(){
-
+void solve() {
+    int n , sum = 0 , s = 1  ;
+    cin >> n ;
+    while (s <= n )
+    {
+        sum += (n-s+1)*(n-s+1) ;
+        s += 2 ;
+    }
+    cout << sum << "\n" ;
 }
 int main()
 {
