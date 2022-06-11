@@ -16,20 +16,21 @@ typedef pair<int, int> pi;
 #define POB pop_back
 #define MP make_pair
 void solve() {
-    int Ncards , Nshuffle ;
+    ll Ncards , Nshuffle ;
     cin >> Ncards ;
     int Cards[Ncards] ;
     FOR (i,Ncards) {
         cin >> Cards[i] ;
     }
     cin >> Nshuffle ;
-    int Shuffle = 0  ;
+    ll Shuffle = 0  ;
     FOR(j,Nshuffle) {
         int s ;
         cin >> s ;
         Shuffle += s ;
     }
-    cout << Cards[Ncards%Nshuffle - 1 ] << '\n' ;
+    cout << Cards[Shuffle%Ncards] << "\n";
+    
 
 
 }
