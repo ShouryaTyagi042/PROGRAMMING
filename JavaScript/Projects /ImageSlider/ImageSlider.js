@@ -1,4 +1,4 @@
-alert("JS file is working") ;
+// alert("JS file is working") ;
 var images = [
     "Img1.jpeg",
     "Img2.jpeg",
