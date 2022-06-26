@@ -1,12 +1,13 @@
+alert("JS file is working") ;
 var images = [
-    /Users/shouryatyagi/Desktop/PROGRAMMING/JavaScript/Projects /ImageSlider/Img1.jpeg,
-    /Users/shouryatyagi/Desktop/PROGRAMMING/JavaScript/Projects /ImageSlider/Img2.jpeg,
-    /Users/shouryatyagi/Desktop/PROGRAMMING/JavaScript/Projects /ImageSlider/Img3.jpeg
+    "Img1.jpeg",
+    "Img2.jpeg",
+    "Img3.jpeg"
 ] ;
 
 var num = 0 ;
 function next() {
-    var slider = document.getElementById(slider);
+    var slider = document.getElementById('slider');
     num ++ ;
     if (num >= images.length) {
         num = 0 ;
