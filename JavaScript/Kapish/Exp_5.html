@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Experiment5</title>
+        <!-- <link rel = "stylesheet" href = "Slider.css" > -->
+        
+	</head>
+	<body>
+        <button onclick= "showdiv()" > Virat Kohli </button>
+        <div>
+            <img id = "Virat" src="/Users/shouryatyagi/Desktop/PROGRAMMING/JavaScript/Kapish/ViratKohli.png" alt="virat">
+        </div>
+        <input type="button" id="b1" value="Add 2 Interger" onclick="add(10,20)"> 
+        <input type="button" id="b2" value="Add 2 Float" onclick="add(10.04,20.15)">
+        <input type="button" id="b3" value="Add 1 Interger and 1 Float" onclick="add(10,20.48)">
+        <script>
+            alert("This is the information box" );
+            var div = document.getElementById('Virat');
+            div.style.visibility = 'hidden';
+            function showdiv() {
+                div.style.visibility = 'visible';
+            }
+            function add(a , b )
+            {
+                var sum = a+b;
+                alert("Addition:  "+sum);
+            }
+ 
+        </script>
+	</body>
+</html>
