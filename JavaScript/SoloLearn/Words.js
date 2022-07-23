@@ -4,7 +4,7 @@ class Add {
     }
     print() {
       let txt = "$" ;
-      for (let v in this.words) {
+      for (let v of this.words) {
         txt += v + "$" ;
         console.log(txt) ;
       }
