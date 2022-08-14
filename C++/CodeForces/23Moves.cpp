@@ -16,18 +16,20 @@ typedef pair<int, int> pi;
 #define POB pop_back
 #define MP make_pair
 void solve() {
-    cin >> x ;
-    if (x%3 == 0) {
-        cout << x/3 << "\n" ;
-        return ;
+    int n ;
+    cin >> n ;
+    if (n<=3) {
+        if (n%3==0 || n%2==0) {
+            cout << 1 << "\n" ;
+            return ;
+        }
+        else {
+            cout << 2 << "\n" ;
+            return ;
+        }
     }
-    int n = x/3 ;
-    if (x%2 == 0 ) {
-        n+=2 ;
-    }
-    else {
-        n++ ;
-    }
+    cout << (n+2)/3 << "\n" ;
+
     
 
 
