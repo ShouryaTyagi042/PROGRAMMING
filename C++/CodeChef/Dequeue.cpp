@@ -1,0 +1,71 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define max(a, b) (a < b ? b : a)
+#define min(a, b) ((a > b) ? b : a)
+// #define mod 1e9 + 7
+#define FOR(a, c) for (int(a) = 0; (a) < (c); (a)++)
+// #define FORL(a, b, c) for (int(a) = (b); (a) <= (c); (a)++)
+// #define FORR(a, b, c) for (int(a) = (b); (a) >= (c); (a)--)
+#define INF 1000000000000000003
+typedef long long int ll;
+typedef vector<int> vi;
+typedef pair<int, int> pi;
+#define F first
+#define S second
+#define PB push_back
+#define POB pop_back
+#define MP make_pair
+void showdq(deque<int> g)
+{
+    deque<int>::iterator it;
+    for (it = g.begin(); it != g.end(); ++it)
+        cout << '\t' << *it;
+    cout << '\n';
+}
+void solve()
+{
+    int l;
+    cin >> l;
+    deque<int> dq;
+    FOR(i, l)
+    {
+        int a;
+        cin >> a;
+        dq.push_back(a);
+    }
+    int counter = 0;
+    int left, right;
+    while (!dq.empty())
+    {
+        left = dq.pop_front();
+        right = dq.pop_back();
+        if (left < right)
+        {
+            dq.push_back(right - left);
+            counter++;
+        }
+        else if (right < left)
+        {
+            dq.push_front(left - right);
+            counter++;
+        }
+    }
+    cout << counter;
+}
+int main()
+{
+#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+#endif
+    ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+    int T;
+    cin >> T;
+    while (T > 0)
+    {
+        solve();
+
+        T--;
+    }
+    return 0;
+}
