@@ -18,10 +18,46 @@ typedef pair<int, int> pi;
 void solve()
 {
     int l;
+    cin >> l;
     int arr[l];
     FOR(i, l)
     {
+        cin >> arr[i];
     }
+    int first = 0, second = -1;
+    for (int i = 1; i < l; i++)
+    {
+        if (arr[i] > arr[first])
+        {
+            second = first;
+            first = i;
+        }
+        else if (arr[i] < arr[first])
+        {
+            if (second == -1 || arr[second] < arr[i])
+                second = i;
+        }
+    }
+    int max = arr[first], s_max = arr[second];
+    FOR(i, l)
+    {
+        if (arr[i] == max)
+        {
+            if (max == s_max)
+            {
+                cout << 0 << " ";
+            }
+            else
+            {
+                cout << max - s_max << " ";
+            }
+        }
+        else
+        {
+            cout << arr[i] - max << " ";
+        }
+    }
+    cout << "\n";
 }
 int main()
 {
