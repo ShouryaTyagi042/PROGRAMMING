@@ -1,4 +1,4 @@
-import cv2
+import cv2 as cv
 import mediapipe as mp
 import pyautogui
 import time
@@ -27,7 +27,7 @@ def count_fingers(lst):
     return cnt
 
 
-cap = cv2.VideoCapture(0)
+cap = cv.VideoCapture(0)
 
 drawing = mp.solutions.drawing_utils
 hands = mp.solutions.hands
@@ -40,9 +40,9 @@ prev = -1
 while True:
     end_time = time.time()
     _, frm = cap.read()
-    frm = cv2.flip(frm, 1)
+    frm = cv.flip(frm, 1)
 
-    res = hand_obj.process(cv2.cvtColor(frm, cv2.COLOR_BGR2RGB))
+    res = hand_obj.process(cv.cvtColor(frm, cv.COLOR_BGR2RGB))
 
     if res.multi_hand_landmarks:
 
@@ -76,8 +76,8 @@ while True:
 
         drawing.draw_landmarks(frm, hand_keyPoints, hands.HAND_CONNECTIONS)
 
-    cv2.imshow("window", frm)
-    if cv2.waitKey(1) & 0xff == ord('q'):
-        cv2.destroyAllWindows()
+    cv.imshow("window", frm)
+    if cv.waitKey(1) & 0xff == ord('q'):
+        cv.destroyAllWindows()
         cap.release()
         break
