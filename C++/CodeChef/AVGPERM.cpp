@@ -19,14 +19,37 @@ void solve()
 {
     int n;
     cin >> n;
-    int sum = 0;
-    int temp = 1;
-    while (temp >= n)
+    int temp = n;
+    if (n % 2 == 0)
     {
-        sum += (n - temp + 1) * (n - temp + 1);
-        temp += 2;
+        while (temp >= 1)
+        {
+            cout << temp << " ";
+            temp -= 2;
+        }
+        temp = 1;
+        while (temp < n)
+        {
+            cout << temp << " ";
+            temp += 2;
+        }
+        cout << "\n";
     }
-    cout << sum << "\n";
+    else
+    {
+        while (temp > 0)
+        {
+            cout << temp << " ";
+            temp -= 2;
+        }
+        temp = 2;
+        while (temp < n)
+        {
+            cout << temp << " ";
+            temp += 2;
+        }
+        cout << "\n";
+    }
     return;
 }
 int main()
