@@ -1,10 +1,11 @@
 {
-    "C_Cpp.errorSquiggles": "Disabled",
-    "files.associations": {
-        "deque": "cpp",
-        "string": "cpp",
-        "vector": "cpp",
-        "iostream": "cpp"
-    },
-    "python.formatting.provider": "yapf"
+  "C_Cpp.errorSquiggles": "Disabled",
+  "files.associations": {
+    "deque": "cpp",
+    "string": "cpp",
+    "vector": "cpp",
+    "iostream": "cpp"
+  },
+  "python.formatting.provider": "yapf",
+  "files.exclude": {}
 }

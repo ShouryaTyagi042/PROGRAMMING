@@ -21,7 +21,7 @@ void solve()
     cin >> n;
     int sum = 0;
     int temp = 1;
-    while (temp >= n)
+    while (temp <= n)
     {
         sum += (n - temp + 1) * (n - temp + 1);
         temp += 2;
