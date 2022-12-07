@@ -1,6 +1,3 @@
-NO
-YES
-ccbaccdd
-YES
-xxyy
-NO
+18
+3
+10
