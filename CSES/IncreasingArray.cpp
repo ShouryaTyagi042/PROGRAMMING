@@ -17,25 +17,33 @@ typedef pair<int, int> pi;
 #define MP make_pair
 void solve()
 {
-    ll l;
-    cin >> l;
-    ll sum = 0;
-    ll actaul_sum = (l * (l + 1)) / 2;
-    ll temp;
-    FOR(i, l - 1)
-    {
-        cin >> temp;
-        sum += temp;
-    }
-    cout << actaul_sum - sum;
 }
 int main()
 {
-#ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-#endif
-    ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
-    solve();
+    // #ifndef ONLINE_JUDGE
+    //     freopen("input.txt", "r", stdin);
+    //     freopen("output.txt", "w", stdout);
+    // #endif
+    //     ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+    int l;
+    cin >> l;
+    // cout << l;
+    long arr[l];
+    FOR(i, l)
+    {
+        cin >> arr[i];
+    }
+    long ans = 0;
+    int j = 0;
+    for (int i = 1; i < l; i++)
+    {
+        if (arr[i] < arr[j])
+        {
+            ans += arr[j] - arr[i];
+            arr[i] = arr[j];
+        }
+        j++;
+    }
+    cout << ans;
     return 0;
 }
