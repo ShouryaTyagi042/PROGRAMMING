@@ -41,3 +41,5 @@ img_negative = np.subtract(white_image, img)
 # cv2.imwrite("Python/DIP Workshop/images/sherlock_hsv.png", img_hsv)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
+
