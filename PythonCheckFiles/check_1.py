@@ -7,7 +7,7 @@ class BST:
     def __init__(self) :
         self.root = None
     def inorder(self,root):
-        if root:
+        if root: 
             self.inorder(root.left)
             print(root.val, end=" ")
             self.inorder(root.right)
