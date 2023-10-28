@@ -15,12 +15,12 @@ cv2.imshow("Image2", img2)
 
 # cv2.bitwise_and is applied over the
 # image inputs with applied parameters
-dest_and = cv2.bitwise_xor(img2, img1, mask=None)
+dest_and = cv2.bitwise_and(img2, img1, mask=None)
 
 # the window showing output image
 # with the Bitwise AND operation
 # on the input images
-cv2.imshow('Bitwise Xor', dest_and)
+cv2.imshow('Bitwise And', dest_and)
 
 # De-allocate any associated memory usage
 if cv2.waitKey(0) & 0xff == 27:

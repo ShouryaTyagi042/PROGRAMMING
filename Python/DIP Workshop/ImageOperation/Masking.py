@@ -16,7 +16,6 @@ mask = cv2.inRange(hsv, lower_yellow, upper_yellow)
 result = cv2.bitwise_and(img, img, mask=mask)
 # display the mask and masked image
 cv2.imshow('Mask', mask)
-cv2.waitKey(0)
 cv2.imshow('Masked Image', result)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
