@@ -32,7 +32,7 @@ print(px)
 #             (100, 100), font, 4, white, 4)
 # cv2.imshow("updated", img)
 # (name_image, text,coordinates for the text,
-# font_type, font_scale,color,thickness)
+# font_type, font_scale,color,thickness)aq
 
 
 # # Cropping the image
