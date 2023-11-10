@@ -1,4 +1,14 @@
-let a: number = 34 ;
-if(a < 30) {
-    console.log(a) ;
+type Employee = {
+    readonly id : number ,
+    name : string ,
+    retire: (date: Date) => void
 }
+
+let employee1 : Employee = {
+    id: 1 ,
+    name: "Shourya" ,
+    retire: (date:Date) => {
+        console.log(date);    
+    }
+}
+
